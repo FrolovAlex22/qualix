@@ -1,0 +1,18 @@
+<!-- templates/birthday/birthday.html -->
+{% extends "base.html" %}
+
+{% load django_bootstrap5 %}
+
+{% block content %}
+<form>
+  <div class="card col-4">
+    <div class="card-header">
+    <form>
+      <table>
+        {% bootstrap_form form %}
+      </table>
+      {% bootstrap_button button_type="submit" content="Отправить" %}
+    </div>
+  </div>
+</form>
+{% endblock %}
