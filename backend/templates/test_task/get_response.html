@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% load django_bootstrap5 %}
+
+{% block content %}
+<div class="card col-4">
+  <div class="card-header">
+    <table>
+      <p>Результат {{selected_method}} запроса к эндпойнту: {{url}} вернул ответ со статусом: {{result}}</p>
+    </table>
+  </div>
+</div>
+{% endblock %}

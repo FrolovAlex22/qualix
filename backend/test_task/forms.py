@@ -2,16 +2,18 @@ from django import forms
 
 
 HTTP_METHODS = [
-    ('get', 'Get'),
-    ('post', 'Post')
+    ('GET', 'GET'),
+    ('POST', 'POST')
 ]
 
 
 class RequestForm(forms.Form):
-    method = forms.ChoiceField(choices = HTTP_METHODS, label="Выберите метод")
-    # forms.MultipleChoiceField(
-    #     required=False,
-    #     widget=forms.CheckboxSelectMultiple,
-    #     choices=HTTP_METHODS,
-    # )
-    url = forms.CharField(label="Пропишите URL")
+    """Форма для ввода метода и данных вызываемого эндпойнта"""
+    selected_method = forms.ChoiceField(
+        choices=HTTP_METHODS,
+        label='Выберите метод'
+    )
+    url = forms.CharField(
+        help_text='Введите эндпоинт строкой, например: https://ya.ru',
+        label='Пропишите URL'
+    )

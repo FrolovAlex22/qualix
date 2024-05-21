@@ -1,0 +1,14 @@
+<!-- templates/birthday/get_response.html -->
+{% extends "base.html" %}
+
+{% load django_bootstrap5 %}
+
+{% block content %}
+  <div class="card col-4">
+    <div class="card-header">
+      <table>
+        <p>Запрос к эндпойнту: https://slb.medv.ru/api/v2/ вернул ответ со статусом: {{result}}</p>
+      </table>
+    </div>
+  </div>
+{% endblock %}
